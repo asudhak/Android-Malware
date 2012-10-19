@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/tab1" >
+<TextView
+		android:layout_height="wrap_content"
+		android:id="@+id/status"
+		android:text="Status:"
+		android:textSize="18sp"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"></TextView>
+
+<TextView
+		android:layout_height="wrap_content"
+		android:id="@+id/description"
+		android:text="Usage\n=====\n \n 1. Use the Location Tab to add profiles \n 2. Use My Profiles tab to edit or delete profiles \n 3. Press Stop to stop app and associated services "
+		android:textSize="18sp"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"></TextView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:text="Start"
+        android:onClick="startProgram"
+        
+        ></Button>
+     <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:onClick="stopProgram"
+        android:hapticFeedbackEnabled="true"
+        
+        ></Button>
+    
+    <ToggleButton android:id="@+id/togglebutton"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:textOn="Ringer Manager on"
+        android:textOff="RingerManager off"
+        android:onClick="onToggleClicked"/>
+
+    </LinearLayout>

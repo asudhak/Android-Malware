@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+                         >
+   
+    <TextView android:id="@+id/text1"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              />
+    <EditText
+	android:id="@+id/Location"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	/>
+    
+	
+	
+	<SeekBar
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10px"
+   android:text="Select Diameter"
+   android:id="@+id/seekbar"
+   android:max="100"
+   android:progress="50"
+   />
+    
+	<RadioGroup android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" android:orientation="vertical"
+                 android:id="@+id/group1">
+                 <TextView android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Choose Profile" android:textStyle="bold" />
+                 <RadioButton android:checked="false"
+                         android:text="SILENT" android:id="@+id/silent" />
+                 <RadioButton android:checked="false" 
+                     android:text="VIBRATING" android:id="@+id/vib" />
+                 <RadioButton android:checked="false"
+                         android:text="LOUD" android:id="@+id/loud" />
+         </RadioGroup>
+         
+	<CheckBox android:id="@+id/allowemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allow Missed Call Notification"
+        />
+         
+	<Button
+	android:id="@+id/add"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:text="ADD"
+	android:hapticFeedbackEnabled="true"
+	/>
+	<Button
+	android:id="@+id/dismiss"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:text="CANCEL"
+	android:hapticFeedbackEnabled="true"
+	/>
+	
+    
+</LinearLayout>

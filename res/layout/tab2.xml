@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/tab2" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresh"
+        ></Button>
+
+<com.google.android.maps.MapView
+        android:id="@+id/myMapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0Ezt61it8xVLtbZrj1hceeM_fTWscVozgH-_F0Q"
+        android:clickable="true"
+        android:enabled="true" />
+    
+    </LinearLayout>

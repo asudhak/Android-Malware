@@ -1,0 +1,59 @@
+ public String show_alert() {
+    	// TODO Auto-generated method stub
+    	final EditText input=new EditText(this);
+    	
+    	 AlertDialog.Builder alert_box=new AlertDialog.Builder(this);
+    	 alert_box.setMessage("Do you want to add your current location?");
+    	 alert_box.setView(input);
+    	 
+    	 alert_box.setPositiveButton("ADD",new DialogInterface.OnClickListener() {
+    	 @Override
+    	 public void onClick(DialogInterface dialog, int which) {
+    	 // Close application
+    		 String Location=input.getText().toString().trim();
+    		 Toast.makeText(getApplicationContext(), "ADDED: "+ Location, 4).show();
+    		dialog.dismiss();
+    		String profile=showProfiles();
+    		 Toast.makeText(getBaseContext(), profile, 4).show();
+    		 
+//    		 addtoDB(Location, profile, 0, getApplicationContext());
+    		 
+    		}
+    	 });
+    	 alert_box.setNegativeButton("No", new DialogInterface.OnClickListener() {
+    	 @Override
+    	 public void onClick(DialogInterface dialog, int which) {
+    	 // Do whatever you wish, i am show Toast
+    	 Toast.makeText(getApplicationContext(), "No Button Clicked", Toast.LENGTH_LONG).show();
+    	 }
+    	 });
+
+    	 alert_box.show();
+    	 return input.getText().toString();
+    }
+    
+    private String showProfiles(){
+    final CharSequence[] items = {"Foo", "Bar", "Baz"};
+    
+    AlertDialog.Builder builder = new AlertDialog.Builder(LocationRepresenter.this);
+    builder.setTitle("Make your selection");
+    builder.setItems(items, new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int item) {
+             // Do something with the selection
+//        	Toast.makeText(getApplicationContext(), item, 3);
+        	setProfile(item);
+        	         	
+        }
+    });
+             
+    AlertDialog alert = builder.create();
+    alert.show();
+    return (String)items[profile];
+    }
+    
+    public static void setProfile(int item)
+    {
+    	
+		profile=item;
+    	
+    }
